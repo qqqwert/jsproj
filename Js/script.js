@@ -22,3 +22,23 @@
 Проверить, чтобы все работало без ошибок в консоли */
 
 'use strict';
+
+const numberOffilms = +prompt("Сколько фильмов посмотрели", "");
+
+const personMuvieDb = {
+    count: numberOffilms,
+    movies:{},
+    actor:{},
+    genres:[],
+    privat: false,
+};
+
+const a = prompt("Последний фильм", ""),
+      b = prompt("Дайте ему оценку", ""),
+      c = prompt("Последний фильм", ""),
+      d = prompt("Дайте ему оценку", "");
+
+personMuvieDb.movies[a] = b;
+personMuvieDb.movies[c] = d;
+
+console.log(personMuvieDb);
