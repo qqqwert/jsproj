@@ -9,15 +9,17 @@ function start(){
         numberOffilms = +prompt("Сколько фильмов посмотрели", "");
     }
 }
-start();
+
 
 const personMuvieDb = {
     count: numberOffilms,
     movies: {},
     actor: {},
     genres: [],
-    privat: true,
+    privat:false,
 };
+
+
 
 function remembrFilm(){
 
@@ -34,6 +36,8 @@ for (let i = 0; i < 2; i++) {
     }
 }
 }
+
+
 
 function personaLevel(){
 
@@ -55,3 +59,14 @@ function showMyDB(hiden){
 }
 
 showMyDB(personMuvieDb.privat);
+
+
+
+function writeYourGenres(){
+    for(let i=1; i<=3; i++){
+        const genr = prompt(`3 ваших любимых жанра по убыванию ${i}`);
+        personMuvieDb.genres[i-1] = genr;
+    }
+}
+
+writeYourGenres();
